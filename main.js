@@ -12,7 +12,7 @@ document.getElementById('openModal').addEventListener('click', function() {
 let instagramFollowed = false;
 let twitterFollowed = false;
 let facebookFollowed = false;
-let youtubeFollow = false;
+let youtubeFollowed = false; 
 
 // Open Instagram in new tab and mark as followed
 document.getElementById('instagramFollow').addEventListener('click', function() {
@@ -39,11 +39,16 @@ document.getElementById('facebookFollow').addEventListener('click', function() {
 });
 
 // Open YouTube in new tab and mark as followed
-
+document.getElementById('youtubeFollow').addEventListener('click', function() {
+    youtubeFollowed = true;
+    this.innerText = "Followed on Youtube!";
+    this.disabled = true;
+    checkAllFollowed();
+});
 
 // Enable submit button if all follow buttons are clicked
 function checkAllFollowed() {
-    if (instagramFollowed && twitterFollowed && facebookFollowed) {
+    if (instagramFollowed && twitterFollowed && facebookFollowed && youtubeFollowed) {
         document.getElementById('submitBtn').disabled = false;
         document.getElementById('submitBtn').classList.remove('cursor-not-allowed', 'opacity-50');
     }
