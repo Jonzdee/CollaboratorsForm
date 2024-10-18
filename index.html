@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborator Registration</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white text-center py-6">
+        <h1 class="text-3xl font-bold">My 100 JavaScript Projects</h1>
+        <p class="mt-2">Follow my journey and stay updated!</p>
+        <a href="https://www.instagram.com/innovatech887/"
+            class="bg-white text-blue-600 px-4 py-2 mt-4 inline-block rounded">Follow on Instagram</a>
+    </header>
+
+    <!-- Project Showcase Section -->
+    <!-- Project Showcase Section -->
+<main class="max-w-6xl mx-auto my-10">
+    <h2 class="text-3xl font-bold text-center mb-8">100 JavaScript Projects</h2>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <article class="bg-white p-6 shadow-lg rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Something Practical and Elegant</h3>
+            <p><strong>Description:</strong> This is a beautifully crafted tool that solves a common problem in a seamless way, making you wonder how you lived without it.</p>
+
+            <!-- Project Screenshot -->
+            <img src="https://res.cloudinary.com/dthpnue1d/image/upload/c_fill,g_faces,w_480/c_scale,q_auto,f_auto,fl_lossy/practical_applications_of_js_and_tips_for_web_development_bg_ab8bb86d68.png?_a=DAJAUVWIZAA0" alt="Project Screenshot" class="my-4 w-full rounded-lg">
+
+            <!-- Project Demo and Code Links -->
+            <a href="demo-link1.html" class="bg-green-500 text-white px-4 py-2 rounded inline-block mb-2">Explore It</a>
+            <a href="https://github.com/Jonzdee/100-Javascript-Project.git" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white px-4 py-2 rounded inline-block mb-2">Dive Into the Code</a>
+
+            <!-- Blog Content (optional) -->
+            <p class="mt-4">Elegant and intuitive, this project demonstrates how JavaScript can make life a bit easier, one interaction at a time.</p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="bg-white p-6 shadow-lg rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">A Fun and Engaging Experience</h3>
+            <p><strong>Description:</strong> Ready to enjoy a small yet clever application that will surprise you with how engaging and useful it is? This project will make your day.</p>
+
+            <!-- Project Screenshot -->
+            <img src="https://www.wscubetech.com/blog/wp-content/uploads/2024/05/movie-app.webp" alt="Project Screenshot" class="my-4 w-full rounded-lg">
+
+            <!-- Project Demo and Code Links -->
+            <a href="demo-link2.html" class="bg-green-500 text-white px-4 py-2 rounded inline-block mb-2">Give It a Try</a>
+            <a href="https://github.com/Jonzdee/100-Javascript-Project.git" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white px-4 py-2 rounded inline-block mb-2">See the Magic Behind It</a>
+
+            <!-- Blog Content (optional) -->
+            <p class="mt-4">This project shows just how fun and interactive JavaScript can be, creating a delightful experience for anyone who uses it.</p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="bg-white p-6 shadow-lg rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Making the Complex Simple</h3>
+            <p><strong>Description:</strong> Some things seem hard until you realize they can be made simple. This project strips complexity away and makes tasks incredibly easy.</p>
+
+            <!-- Project Screenshot -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png" alt="Project Screenshot" class="my-4 w-full rounded-lg">
+
+            <!-- Project Demo and Code Links -->
+            <a href="demo-link3.html" class="bg-green-500 text-white px-4 py-2 rounded inline-block mb-2">Try It Out</a>
+            <a href="https://github.com/Jonzdee/100-Javascript-Project.git" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white px-4 py-2 rounded inline-block mb-2">Peek at the Code</a>
+
+            <!-- Blog Content (optional) -->
+            <p class="mt-4">This one will leave you asking, "Why isn't everything this simple?" It’s a testament to the power of clean, efficient code.</p>
+        </article>
+    </section>
+</main>
+
+    <!-- Follow Section (Repeats after each project) -->
+    <section class="bg-gray-100 py-10 text-center">
+        <h3 class="text-xl font-semibold mb-4">Want to stay updated?</h3>
+        <p class="mb-4">Follow me on social media to get the latest on my JavaScript projects!</p>
+        <a href="https://www.instagram.com/innovatech887/" class="bg-blue-600 text-white px-4 py-2 rounded mx-2">Instagram</a>
+        <a href="https://x.com/innovatech887" class="bg-blue-500 text-white px-4 py-2 rounded mx-2">Twitter</a>
+        <a href="https://www.youtube.com/@Innovatech001" class="bg-blue-500 text-white px-4 py-2 rounded mx-2">YouTube</a>
+        <a href="https://web.facebook.com/profile.php?id=61567253942927" class="bg-blue-700 text-white px-4 py-2 rounded mx-2">Facebook</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 Your Name | All rights reserved.</p>
+    </footer>
+
+    <!-- Button to trigger the modal (hidden by default, triggered on page load with JavaScript) -->
+    <button id="openModal" class="hidden">Open Registration Modal</button>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4 text-center">Collaborator Registration</h2>
+
+            <!-- Registration Form -->
+            <form id="registrationForm" class="space-y-4" >
+                <!-- Name Input -->
+                <div>
+                    <label for="name" class="block text-sm font-medium">Name</label>
+                    <input type="text" id="name" class="w-full border rounded p-2" required>
+                </div>
+            
+                <!-- Gmail Input -->
+                <div>
+                    <label for="email" class="block text-sm font-medium">Gmail</label>
+                    <input type="email" id="email" class="w-full border rounded p-2" placeholder="example@gmail.com" required>
+                </div>
+            
+                <!-- Social Media Follow Buttons -->
+                <div class="text-center">
+                    <p class="mb-3">Follow us on:</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://www.instagram.com/innovatech887/" target="_blank" id="instagramFollow" class="bg-blue-500 text-white px-4 py-2 rounded">Follow on Instagram</a>
+                        <a href="https://x.com/innovatech887" target="_blank" id="twitterFollow" class="bg-blue-400 text-white px-4 py-2 rounded">Follow on Twitter</a>
+                        <a href="https://web.facebook.com/profile.php?id=61567253942927" target="_blank" id="facebookFollow" class="bg-blue-700 text-white px-4 py-2 rounded">Follow on Facebook</a>
+                        <a href="https://www.youtube.com/@Innovatech001" target="_blank" id="youtubeFollow" class="bg-blue-700 text-white px-4 py-2 rounded">Follow on YouTube</a>
+                    </div>
+                </div>
+            
+                <!-- Submit Button (Initially Disabled) -->
+                <button id="submitBtn" type="submit" class="w-full bg-green-500 text-white py-2 rounded cursor-not-allowed opacity-50" disabled>Submit</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <!-- JavaScript to handle form logic -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
