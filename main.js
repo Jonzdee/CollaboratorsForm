@@ -54,14 +54,49 @@ function checkAllFollowed() {
     }
 }
 
-// Form submission handling
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+// // Form submission handling
+// document.getElementById('registrationForm').addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     const name = document.getElementById('name').value;
+//     const email = document.getElementById('email').value;
+
+//     // Simulate form submission or send data to server
+//     alert(`Thanks for registering, ${name}! We'll add you as a collaborator.`);
+
+//     // Close modal after form submission
+//     document.getElementById('registrationModal').classList.add('hidden');
+// });
+
+//mongodb data
+document.getElementById('registrationForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    // Simulate form submission or send data to server
-    alert(`Thanks for registering, ${name}! We'll add you as a collaborator.`);
+    // Prepare the data to send
+    const data = { name, email };
+
+    try {
+        // Send data to the server
+        const response = await fetch('http://localhost:5000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            alert(`Thanks for registering, ${name}! We'll add you as a collaborator.`);
+            // Optionally reset the form
+            document.getElementById('registrationForm').reset();
+        } else {
+            alert('Error registering user. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again later.');
+    }
 
     // Close modal after form submission
     document.getElementById('registrationModal').classList.add('hidden');
